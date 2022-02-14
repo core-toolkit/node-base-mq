@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  },
+  "name": "node-base-mq",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/core-toolkit/node-base-mq.git"
+  },
+  "author": "Alexander Ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/core-toolkit/node-base-mq/issues"
+  },
+  "homepage": "https://github.com/core-toolkit/node-base-mq#readme",
+  "description": "",
+  "devDependencies": {
+    "node-base-dev": "github:core-toolkit/node-base-dev"
+  }
+}
