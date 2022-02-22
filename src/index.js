@@ -1,5 +1,5 @@
 const MakeMqClient = require('./clients/MqClient');
-const MakeMqService = require('./clients/MqService');
+const MakeMqService = require('./services/MqService');
 
 module.exports = (app) => {
   app.register('Client', 'MqClient', MakeMqClient);
