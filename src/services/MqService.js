@@ -23,5 +23,6 @@ module.exports = async ({ Core: { Config: { mq: { prefix } } }, Client: { MqClie
     addListener: (handler) => emitter.addListener('message', handler),
     bind: (exchange, routingKey = '*') => ch.bindQueue(queue, exchange, routingKey),
     publish: (routingKey, data) => ch.publish(exchange, routingKey, Buffer.from(JSON.stringify(data))),
+    close: () => ch.close(),
   };
 };

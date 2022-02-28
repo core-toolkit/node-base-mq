@@ -6,6 +6,7 @@ const channel = {
   bindQueue: jest.fn(),
   consume: jest.fn(),
   publish: jest.fn(),
+  close: jest.fn(),
 };
 
 const context = {
@@ -83,6 +84,15 @@ describe('MqService', () => {
       await service.publish('bar', { baz: 123 });
       expect(channel.publish).toHaveBeenCalledWith('foo-exchange', 'bar', expect.any(Buffer));
       expect(channel.publish.mock.lastCall[2].toString()).toBe('{"baz":123}');
+    });
+  });
+
+  describe('.close()', () => {
+    it('closes the underlying channel', async () => {
+      const service = await MqService(context);
+      expect(channel.close).not.toHaveBeenCalled();
+      await service.close();
+      expect(channel.close).toHaveBeenCalled();
     });
   });
 });
