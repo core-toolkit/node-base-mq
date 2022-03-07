@@ -1,9 +1,7 @@
 {
-  "dependencies": {
-    "amqplib": "^0.8.0"
-  },
-  "name": "node-base-mq",
+  "name": "@core-toolkit/node-base-mq",
   "version": "0.0.1",
+  "description": "AMQP connection plugin for node-base",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --detectOpenHandles"
@@ -18,8 +16,13 @@
     "url": "https://github.com/core-toolkit/node-base-mq/issues"
   },
   "homepage": "https://github.com/core-toolkit/node-base-mq#readme",
-  "description": "",
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  },
   "devDependencies": {
-    "node-base-dev": "github:core-toolkit/node-base-dev"
+    "@core-toolkit/node-base-dev": "^0.0.1"
+  },
+  "peerDependencies": {
+    "@core-toolkit/node-base": "^0.0.6"
   }
 }
